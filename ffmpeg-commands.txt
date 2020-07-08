@@ -1,0 +1,101 @@
+ffmpeg -f image2 -framerate 30 -i /Volumes/Volumina/frames/complex-swirl/dots-750/sketch-%05d.png -vf palettegen /Volumes/Volumina/frames/complex-swirl/dots-palette.png
+
+ffmpeg -f image2 -framerate 30 -i /Volumes/Volumina/frames/complex-swirl/dots-750/sketch-%05d.png -i /Volumes/Volumina/frames/complex-swirl/dots-palette.png -lavfi paletteuse /Volumes/Volumina/frames/complex-swirl/dots-750.gif
+
+gifsicle -O3 --lossy=150 -o /Volumes/Volumina/video-renders/complex-swirl/dots-750-lossy-150.gif /Volumes/Volumina/video-renders/complex-swirl/dots-750.gif
+
+
+ffmpeg -f image2 -framerate 30 -i /Volumes/Volumina/frames/complex-swirl/dots-500x500/sketch-%05d.png -vf palettegen /Volumes/Volumina/video-renders/complex-swirl/dots-palette-500x500.png
+
+ffmpeg -f image2 -framerate 30 -i /Volumes/Volumina/frames/complex-swirl/dots-500x500/sketch-%05d.png -i /Volumes/Volumina/video-renders/complex-swirl/dots-palette-500x500.png -lavfi paletteuse /Volumes/Volumina/video-renders/complex-swirl/dots-500x500.gif
+
+gifsicle -O3 --lossy=150 -o /Volumes/Volumina/video-renders/complex-swirl/dots-500x500-lossy-150.gif /Volumes/Volumina/video-renders/complex-swirl/dots-500x500.gif
+
+-----------------
+
+ffmpeg -f image2 -framerate 24 -i /Volumes/Volumina/frames/complex-swirl/dots-500x500/sketch-%05d.png -vf palettegen=stats_mode=diff /Volumes/Volumina/frames/complex-swirl/palettes/dots-500x500-palette-nodiff.png
+
+ffmpeg -f image2 -framerate 24 -i /Volumes/Volumina/frames/complex-swirl/dots-500x500/sketch-%05d.png -i /Volumes/Volumina/frames/complex-swirl/palettes/dots-500x500-palette-nodiff.png -lavfi \
+paletteuse=dither=sierra2:diff_mode=rectangle \
+/Volumes/Volumina/video-renders/complex-swirl/dots-500x500-sierra2.gif
+
+
+ffmpeg -f image2 -framerate 30 -i /Volumes/Volumina/frames/complex-swirl/dots-500x500/sketch-%05d.png -i /Volumes/Volumina/video-renders/complex-swirl/dots-palette-500x500.png -lavfi paletteuse /Volumes/Volumina/video-renders/complex-swirl/dots-500x500.gif
+
+
+-----------
+
+ffmpeg -f image2 -framerate 30 -i /Volumes/Volumina/frames/complex-swirl/dots-600x600/sketch-%05d.png -vf palettegen /Volumes/Volumina/frames/complex-swirl/palettes/dots-600x600-palette.png
+
+ffmpeg -f image2 -framerate 30 -i /Volumes/Volumina/frames/complex-swirl/dots-600x600/sketch-%05d.png -i /Volumes/Volumina/frames/complex-swirl/palettes/dots-600x600-palette.png -lavfi paletteuse /Volumes/Volumina/video-renders/complex-swirl/dots-600x600.gif
+
+gifsicle -O3 --lossy=150 -o /Volumes/Volumina/video-renders/complex-swirl/dots-600x600-lossy-150.gif /Volumes/Volumina/video-renders/complex-swirl/dots-600x600.gif
+
+
+
+ffmpeg -f image2 -framerate 30 -i /Volumes/Volumina/frames/complex-swirl/dots-600x600-dur500/sketch-%05d.png -vf palettegen /Volumes/Volumina/frames/complex-swirl/palettes/dots-600x600-dur500-palette.png
+
+ffmpeg -f image2 -framerate 30 -i /Volumes/Volumina/frames/complex-swirl/dots-600x600-dur500/sketch-%05d.png -i /Volumes/Volumina/frames/complex-swirl/palettes/dots-600x600-dur500-palette.png -lavfi paletteuse /Volumes/Volumina/video-renders/complex-swirl/dots-600x600-dur500.gif
+
+gifsicle -O3 --lossy=100 -o /Volumes/Volumina/video-renders/complex-swirl/dots-600x600-dur500-lossy-100.gif /Volumes/Volumina/video-renders/complex-swirl/dots-600x600-dur500.gif
+
+gifsicle -O3 --lossy=75 -o /Volumes/Volumina/video-renders/complex-swirl/dots-600x600-dur500-lossy-75.gif /Volumes/Volumina/video-renders/complex-swirl/dots-600x600-dur500.gif
+
+
+
+
+ffmpeg -f image2 -framerate 30 -i /Volumes/Volumina/frames/complex-swirl/dots-white-bg/sketch-%05d.png -vf palettegen /Volumes/Volumina/frames/complex-swirl/palettes/dots-white-bg-palette.png
+
+ffmpeg -f image2 -framerate 30 -i /Volumes/Volumina/frames/complex-swirl/dots-white-bg/sketch-%05d.png -i /Volumes/Volumina/frames/complex-swirl/palettes/dots-white-bg-palette.png -lavfi paletteuse /Volumes/Volumina/video-renders/complex-swirl/dots-white-bg.gif
+
+gifsicle -O3 --lossy=1 -o /Volumes/Volumina/video-renders/complex-swirl/dots-white-bg-lossy-1.gif /Volumes/Volumina/video-renders/complex-swirl/dots-white-bg.gif
+
+gifsicle -O3 --lossy=75 -o /Volumes/Volumina/video-renders/complex-swirl/dots-600x600-dur500-lossy-75.gif /Volumes/Volumina/video-renders/complex-swirl/dots-600x600-dur500.gif
+
+
+
+ffmpeg -f image2 -framerate 30 -i /Volumes/Volumina/frames/complex-swirl/dots-white-bg-dur750/sketch-%05d.png -i /Volumes/Volumina/frames/complex-swirl/palettes/dots-white-bg-palette.png -lavfi paletteuse /Volumes/Volumina/video-renders/complex-swirl/dots-white-bg-dur750.gif
+
+gifsicle -O3 --lossy=10 -o /Volumes/Volumina/video-renders/complex-swirl/dots-white-bg-dur750-lossy-10.gif /Volumes/Volumina/video-renders/complex-swirl/dots-white-bg-dur750.gif
+
+gifsicle -O3 --lossy=100 -o /Volumes/Volumina/video-renders/complex-swirl/dots-white-bg-dur750-lossy-100.gif /Volumes/Volumina/video-renders/complex-swirl/dots-white-bg-dur750.gif
+
+
+ffmpeg -f image2 -framerate 30 -i /Volumes/Volumina/frames/complex-swirl/dots-white-bg-dur600/sketch-%05d.png -i /Volumes/Volumina/frames/complex-swirl/palettes/dots-white-bg-palette.png -lavfi paletteuse /Volumes/Volumina/video-renders/complex-swirl/dots-white-bg-dur600.gif
+
+
+gifsicle -O3 --lossy=10 -o /Volumes/Volumina/video-renders/complex-swirl/dots-white-bg-dur600-lossy-10.gif /Volumes/Volumina/video-renders/complex-swirl/dots-white-bg-dur600.gif
+
+
+
+
+ffmpeg -f image2 -framerate 30 -i /Volumes/Volumina/frames/complex-swirl/dots-white-bg-dur550/sketch-%05d.png -i /Volumes/Volumina/frames/complex-swirl/palettes/dots-white-bg-palette.png -lavfi paletteuse /Volumes/Volumina/video-renders/complex-swirl/dots-white-bg-dur550.gif
+
+
+gifsicle -O3 --lossy=10 -o /Volumes/Volumina/video-renders/complex-swirl/dots-white-bg-dur550-lossy-10.gif /Volumes/Volumina/video-renders/complex-swirl/dots-white-bg-dur550.gif
+
+
+ffmpeg -f image2 -framerate 30 -i /Volumes/Volumina/frames/complex-swirl/dots-white-bg-dur550/sketch-%05d.png -c:v libx264 -pix_fmt yuv420p /Volumes/Volumina/video-renders/complex-swirl/dots-white-bg-dur550.mp4
+
+
+
+
+
+ffmpeg -f image2 -framerate 30 -i /Volumes/Volumina/frames/complex-swirl/lines/sketch-%05d.png -c:v libx264 -pix_fmt yuv420p /Volumes/Volumina/video-renders/complex-swirl/lines.mp4
+
+ffmpeg -f image2 -framerate 30 -i /Volumes/Volumina/frames/complex-swirl/lines/sketch-%05d.png -c:v libx264 -pix_fmt yuv420p -crf 15 /Volumes/Volumina/video-renders/complex-swirl/lines-crf15.mp4
+
+
+ffmpeg -f image2 -framerate 30 -i /Volumes/Volumina/frames/complex-swirl/lines-thinner/sketch-%05d.png -c:v libx264 -pix_fmt yuv420p -crf 15 /Volumes/Volumina/video-renders/complex-swirl/lines-thinner-crf15.mp4
+
+ffmpeg -f image2 -framerate 30 -i /Volumes/Volumina/frames/complex-swirl/lines-thinner/sketch-%05d.png -c:v libx264 -pix_fmt yuv420p -crf 20 /Volumes/Volumina/video-renders/complex-swirl/lines-thinner-crf20.mp4
+
+
+
+
+
+ffmpeg -f image2 -framerate 30 -i /Volumes/Volumina/frames/complex-swirl/lines-thinner-200/sketch-%05d.png -i /Volumes/Volumina/frames/complex-swirl/palettes/dots-white-bg-palette.png -lavfi paletteuse /Volumes/Volumina/video-renders/complex-swirl/lines-thinner-200.gif
+
+ffmpeg -f image2 -framerate 30 -i /Volumes/Volumina/frames/complex-swirl/waves/sketch-%05d.png -c:v libx264 -pix_fmt yuv420p /Volumes/Volumina/video-renders/complex-swirl/waves.mp4
+
+ffmpeg -f image2 -framerate 30 -i /Volumes/Volumina/frames/complex-swirl/waves2/sketch-%05d.png -c:v libx264 -pix_fmt yuv420p /Volumes/Volumina/video-renders/complex-swirl/waves2.mp4
